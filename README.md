@@ -1,4 +1,4 @@
 # vue-init-interceptor
 
-> Good things.
+> Good thing.
 

@@ -2,11 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/vii.js',
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'vii.js'
+    path: path.resolve(__dirname, './'),
+    publicPath: '/',
+    filename: 'index.js'
   },
   module: {
     rules: [
