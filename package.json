@@ -1,6 +1,6 @@
 {
   "name": "vue-init-interceptor",
-  "description": "A Vue.js project",
+  "description": "Project customization tool",
   "version": "1.0.0",
   "author": "pjf <panjf@gegejia.com>",
   "license": "MIT",
