@@ -1,27 +1,27 @@
 class Interceptor {
-  constructor(Vue, teeth = []) {
-    this.teeth = teeth
+  constructor(Vue, plugins = []) {
+    this.plugins = plugins
     this.processApp(Vue)
     this.processComponent(Vue)
   }
 
   processApp(Vue) {
-    const teeth = this.teeth
+    const plugins = this.plugins
     Vue.prototype.orgInit = Vue.prototype._init
     Vue.prototype._init = function (opt) {
-      teeth.forEach(tooth => {
-        tooth(opt)
+      plugins.forEach(plugin => {
+        plugin(opt)
       })
       this.orgInit(opt)
     }
   }
 
   processComponent(Vue) {
-    const teeth = this.teeth
+    const plugins = this.plugins
     Vue.orgExtend = Vue.extend
     Vue.extend = function (opt) {
-      teeth.forEach(tooth => {
-        tooth(opt)
+      plugins.forEach(plugin => {
+        plugin(opt)
       })
       return Vue.orgExtend(opt)
     }
